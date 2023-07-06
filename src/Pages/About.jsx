@@ -17,7 +17,7 @@ const About = () => {
   }, [peliId])
 
   return (
-    <div>TITULO:{peli.name}</div>
+    
   )
 }
 

@@ -6,20 +6,15 @@ const SerieCard = ({ title, image, description, genero, id }) => {
   return (
     <>
       <main>
-        <div className='album py-5 bg-light'>
+        <div className='album py-5 bg-gradient'>
           <div className='container'>
             <div className='col'>
               <div className='card shadow-sm'>
-                <img src={image} alt={title} />
+                <img src={image} alt={title} style={{ objectFit: 'cover', maxHeight: '300px' }} />
 
                 <div className='card-body'>
-                  <h1>{title}</h1>
-                  <h2>{genero}</h2>
-                  <h3>{id}</h3>
-                  <p className='card-text'>
-                    <description />
-                  </p>
-
+                  <h1 className='text-truncate'>{title}</h1>
+                  <h3 className='text-truncate'>{genero}</h3>
                   <div className='d-flex justify-content-between align-items-center'>
                     <div className='btn-group'>
 

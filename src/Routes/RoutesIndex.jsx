@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import Inicio from '../Pages/Inicio'
-import About from '../pages/About'
+import About from '../Pages/About'
 
 const RoutesIndex = () => {
   return (

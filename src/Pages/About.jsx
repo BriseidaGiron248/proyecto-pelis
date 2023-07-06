@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 const About = () => {
@@ -15,6 +15,7 @@ const About = () => {
         console.error(error)
       })
   }, [peliId])
+
   return (
     <div>TITULO:{peli.name}</div>
   )

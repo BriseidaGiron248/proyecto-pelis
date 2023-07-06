@@ -26,8 +26,9 @@ const Inicio = () => {
       })
   }, [])
   return (
-    <div>
-      <section className='py-5 text-center container'>
+
+    <div style={{ background: 'black' }}>
+      <section className='py-5 text-center container' style={{ background: 'red', maxWidth: '100%', maxHeight: '300px' }}>
         <div className='row py-lg-5'>
           <div className='col-lg-6 col-md-8 mx-auto'>
             <h1 className='fw-light'>BUSCA TU SERIE</h1>
@@ -38,16 +39,18 @@ const Inicio = () => {
 
       <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3'>
         {
-      filtereddata.map((peli) => (
+          filtereddata.map((peli) => (
 
-        <SerieCard
-          key={peli.id}
-          title={peli.name}
-          id={peli.id}
-          image={peli.image.original}
-        />
-      ))
-    }
+            <SerieCard
+              key={peli.id}
+              title={peli.name}
+              image={peli.image.original}
+              genero={peli.genres}
+
+            />
+
+          ))
+          }
 
       </div>
       <footer className='text-muted py-5'>
@@ -58,6 +61,7 @@ const Inicio = () => {
         </div>
       </footer>
     </div>
+
   )
 }
 

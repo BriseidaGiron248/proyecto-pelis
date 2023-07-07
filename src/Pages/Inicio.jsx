@@ -31,7 +31,7 @@ const Inicio = () => {
       <section className='py-5 text-center container' style={{ background: 'red', maxWidth: '100%', maxHeight: '300px' }}>
         <div className='row py-lg-5'>
           <div className='col-lg-6 col-md-8 mx-auto'>
-            <h1 className='fw-light'>BUSCA TU SERIE</h1>
+            <h2 className='fw-light' style={{ fontFamily: 'fantasy', fontSize: '60px' }}>BUSCA TU SERIE</h2>
             <NavBar handleSearchChange={handleSearch} />
           </div>
         </div>

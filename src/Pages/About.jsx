@@ -29,7 +29,6 @@ const About = () => {
                 <img style={{ maxHeight: '400px', paddingLeft: '50px' }} src={peli.image.original} alt={peli.name} />
               </div>
               <h1 id='titulodescription' style={{ color: 'white' }}>{peli.name} <p>{peli.summary}</p></h1>
-
             </div>
           </div>
         </main>

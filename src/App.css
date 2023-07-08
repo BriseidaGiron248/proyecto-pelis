@@ -3,7 +3,7 @@
     margin-bottom: 20px;
   }
   
-  .search-bar input {
+.search-bar input {
     width: 100%;
     padding: 12px;
     font-size: 18px;
@@ -11,10 +11,18 @@
     border: 1px solid #ccc;
   }
 p{
-font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 1.8vw;
+width: 50%;
+
 }
 h1{
   font-family:fantasy
+}
+#titulodescription{
+	padding-left: 50px;
+	font-size: 4vw;
+	font-variant: small-caps;
 }
 h3{
   font-family:monospace;
@@ -22,64 +30,28 @@ h3{
 }
 body {
   height: 1500px;
-  background: url(https://www.brainpickings.org/wp-content/themes/brainpickings/images/bckgd_body.png)
   
 }
  
 
-:root {
-	/* Base font size */
-	font-size: 20px;
-
-	/* Heading height variable*/
-	--heading-height: 10em;
+#titulo{
+	font-size: 5vw;
+	padding-left: 50px;
+	padding-top: 50px;
+	color: aliceblue;
+	text-decoration:overline;
 }
-
-
-
-header {
-	position:relative;
-	width: 100%;
-	height: var(--heading-height);
+.angled-gradient {
+	background: linear-gradient(0deg, black, rgb(221, 67, 33),black);
+  }
+#contenedor1{
+	width: auto;
+	height: auto;	
+	position: relative;
 }
-
-/* Create angled background with 'before' pseudo-element */
-header::before {
-	content: "";
-	display: block;
-	position: absolute;
-	left: 0;
-	bottom: 6em;
-	width: 100%;
-	height: calc(var(--heading-height) + 10em);
-	z-index: -1;
-	transform: skewY(-3.5deg);
-	background: 
-		linear-gradient(rgba(210, 12, 12, 0.6), rgba(112, 3, 3, 0.6)),
-		url(https://images.unsplash.com/photo-1495464101292-552d0b52fe41?auto=format&fit=crop&w=1350&q=80) no-repeat center,
-		linear-gradient(#4e4376, #2b5876);
-	background-size: cover;
-	border-bottom: .2em solid #fff;
-}
-
-h1 {
-
-
-	letter-spacing: .01em;
-	padding: 5rem 0 0 4.5rem;
-	text-shadow: .022em .022em .022em #111;
-	color: #fd0404;
- 
-}
-
-main {
-	padding:50px;
-}
-
-p {
-	font-size: calc(2em + .25vw);
-	font-weight: 400;
-	line-height: 2;
-	margin-bottom: 1.5em;
-	color: #fcfcfc;
+.flex-container{
+	display:flex;
+	position: relative;
+	align-items: center;
+	justify-content: center
 }

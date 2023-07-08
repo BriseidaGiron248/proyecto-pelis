@@ -42,6 +42,7 @@ const Inicio = () => {
           filtereddata.map((peli) => (
 
             <SerieCard
+              id={peli.id}
               key={peli.id}
               title={peli.name}
               image={peli.image.original}

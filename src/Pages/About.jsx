@@ -18,19 +18,22 @@ const About = () => {
 
   return (
     <>
-      <header>
-        <h1>Tv Maze <h2>Las Peliculas que buscabas</h2></h1>
-      </header>
-      <main>
-        <section className='row' style={{ display: 'flex' }}>
-          <section className='small-12 medium-8 columns row'>
-            {peli.summary}
-          </section>
-          <section>
-            <img src={peli.image.original} alt={peli.name} style={{ objectFit: 'cover', maxHeight: '300px' }} />
-          </section>
-        </section>
-      </main>
+      <body className='angled-gradient'>
+        <main>
+          <div>
+            <div style={{ padding: '50px' }}>
+              <h1 id='titulo'>Los mejores Shows  TvMaze</h1>
+            </div>
+            <div id='contenedor1' className='shadow-lg p-3 mb-5 bg-white-opacity rounded'>
+              <div className='flex-container'>
+                <img style={{ maxHeight: '400px', paddingLeft: '50px' }} src={peli.image.original} alt={peli.name} />
+              </div>
+              <h1 id='titulodescription' style={{ color: 'white' }}>{peli.name} <p>{peli.summary}</p></h1>
+
+            </div>
+          </div>
+        </main>
+      </body>
     </>
 
   )

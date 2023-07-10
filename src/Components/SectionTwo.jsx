@@ -1,10 +1,8 @@
 import React from 'react'
 
-const SectionTwo = ({ name, id }) => {
+const SectionTwo = ({ temp, name, id }) => {
   return (
-    <div>episodio {id}
-      nombre del episodio {name}
-    </div>
+    <>nombre {name}</>
 
   )
 }

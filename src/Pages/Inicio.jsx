@@ -25,6 +25,7 @@ const Inicio = () => {
         console.error(error)
       })
   }, [])
+
   return (
 
     <div style={{ background: 'black' }}>

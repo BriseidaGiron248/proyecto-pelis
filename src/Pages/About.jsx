@@ -5,20 +5,30 @@ import SectionTwo from '../Components/SectionTwo'
 
 const About = () => {
   const [peli, setPeli] = useState({})
-  const [temp, setTemp] = useState({})
+  const [epi, setEpi] = useState([])
+
   const { peliId } = useParams()
 
   useEffect(() => {
-    Promise.all([
-      fetch(`https://api.tvmaze.com/shows/${peliId}`),
-      fetch(`https://api.tvmaze.com/shows/${peliId}/episodes`)
-    ])
-      .then(([resPelis, resTemp]) =>
-        Promise.all([resPelis.json(), resTemp.json()])
-      )
-      .then(([dataPeli, dataTemp]) => {
-        setPeli(dataPeli)
-        setTemp(dataTemp)
+    fetch(`https://api.tvmaze.com/shows/${peliId}`)
+
+      .then((response) => {
+        return response.json()
+      }).then((results) => {
+        setPeli(results)
+      }).catch((error) => {
+        console.error(error)
+      })
+  }, [peliId])
+  useEffect(() => {
+    fetch(`https://api.tvmaze.com/shows/${peliId}/episodes`)
+      .then((response) => {
+        return response.json()
+      }).then((results) => {
+        console.log(results)
+        setEpi(results)
+      }).catch((error) => {
+        console.error(error)
       })
   }, [peliId])
 
@@ -38,11 +48,14 @@ const About = () => {
             />
           </div>
           <div>
-            <SectionTwo
-              name={temp.name}
-              id={temp.id}
-
-            />
+            {
+            epi.map((item) => (
+              <SectionTwo
+                key={item.id}
+                name={item.name}
+              />
+            ))
+          }
           </div>
         </div>
       </main>

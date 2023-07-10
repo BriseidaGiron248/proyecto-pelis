@@ -7,6 +7,7 @@ const RoutesIndex = () => {
     <Routes>
       <Route path='/' element={<Inicio />} />
       <Route path='/about/:peliId' element={<About />} />
+
     </Routes>
   )
 }

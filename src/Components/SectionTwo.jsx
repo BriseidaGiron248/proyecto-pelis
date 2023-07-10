@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Barra from './Barra'
 
 const SectionTwo = ({ peliId }) => {
   const [epi, setEpi] = useState([])
@@ -17,64 +16,32 @@ const SectionTwo = ({ peliId }) => {
   }, [peliId])
 
   return (
-    <div className='flex-container'>
-      <div className='container'>
-        <h1>Temporada 1</h1>
-        {
-      epi.map((item) => {
-        if (item.season === 1) {
-          return (
-            <div key={item.id}>
+    <div className='container'>
+      <thead>
+        <tr>
+          <th scope='col'>#</th>
+          <th scope='col'>First</th>
+          <th scope='col'>Last</th>
+          <th scope='col'>Handle</th>
+        </tr>
+      </thead>
 
-              <div>{item.name}
-              </div>
-            </div>
+      {
 
-          )
+          epi.map((item) => (
+
+            <table key={item.id} id='tabla' style={{ marginBottom: '0rem' }}>
+              <tbody>
+                <tr>
+                  <th scope='row' style={{ maxWidth: '30px' }}>{item.number}</th>
+                  <td style={{ maxWidth: '15px' }}>{item.season}</td>
+                  <td style={{ width: '250px' }}>{item.name}</td>
+                  <td><div style={{ Width: '450px' }} dangerouslySetInnerHTML={{ __html: [item.summary] }} /></td>
+                </tr>
+              </tbody>
+            </table>
+          ))
         }
-      }
-
-      )
-    }
-      </div>
-      <div className='container'>
-        <h1>Temporada 2</h1>
-        {
-    epi.map((item) => {
-      if (item.season === 2) {
-        return (
-          <div key={item.id}>
-
-            <div>{item.name}
-            </div>
-          </div>
-
-        )
-      }
-    }
-
-    )
-  }
-      </div>
-      <div className='container'>
-        <h1>Temporada 3</h1>
-        {
-    epi.map((item) => {
-      if (item.season === 3) {
-        return (
-          <div key={item.id}>
-            <div>{item.name}
-            </div>
-          </div>
-
-        )
-      }
-    }
-
-    )
-  }
-      </div>
-
     </div>
 
   )

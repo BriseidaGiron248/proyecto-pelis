@@ -26,7 +26,7 @@ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 font-size: 1.2vw;
 
-width: 50%;
+width: 60%;
 
 
 
@@ -67,12 +67,14 @@ main {
     text-decoration:overline;
 }
 .angled-gradient {
-    background: linear-gradient(0deg, black, rgb(221, 67, 33),black);
+    background: black;
   }
+ 
 #contenedor1{
     width: auto;
     height: auto;  
     position: relative;
+    background: linear-gradient(10deg, black, rgb(221, 67, 33));
    
 }
 .flex-container{
@@ -85,9 +87,14 @@ main {
 }
 #caja{
   display: flex;
-	width:auto;
+	width:80%;
 	padding: 10px;;
 	height: 350px;
 }
-	
- 
+#tabla{
+  background: white;
+ border-style: dotted;
+ display: list-item;
+ width: 70%;
+
+} 

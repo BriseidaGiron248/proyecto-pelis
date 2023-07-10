@@ -5,7 +5,7 @@ import SectionTwo from '../Components/SectionTwo'
 
 const About = () => {
   const [peli, setPeli] = useState({})
-  const [temp, setTemp] = useState([])
+  const [temp, setTemp] = useState({})
   const { peliId } = useParams()
 
   useEffect(() => {

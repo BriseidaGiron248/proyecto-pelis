@@ -2,10 +2,9 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import SectioOne from '../Components/SectioOne'
 import SectionTwo from '../Components/SectionTwo'
-
+import SectionThree from '../Components/SectionThree'
 const About = () => {
   const [peli, setPeli] = useState({})
-  const [epi, setEpi] = useState([])
 
   const { peliId } = useParams()
 
@@ -16,17 +15,6 @@ const About = () => {
         return response.json()
       }).then((results) => {
         setPeli(results)
-      }).catch((error) => {
-        console.error(error)
-      })
-  }, [peliId])
-  useEffect(() => {
-    fetch(`https://api.tvmaze.com/shows/${peliId}/episodes`)
-      .then((response) => {
-        return response.json()
-      }).then((results) => {
-        console.log(results)
-        setEpi(results)
       }).catch((error) => {
         console.error(error)
       })
@@ -48,14 +36,11 @@ const About = () => {
             />
           </div>
           <div>
-            {
-            epi.map((item) => (
-              <SectionTwo
-                key={item.id}
-                name={item.name}
-              />
-            ))
-          }
+            <SectionTwo
+              peliId={peli.id}
+            />
+            <SectionThree />
+
           </div>
         </div>
       </main>

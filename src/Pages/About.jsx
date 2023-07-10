@@ -1,38 +1,52 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import SectioOne from '../Components/SectioOne'
+import SectionTwo from '../Components/SectionTwo'
 
 const About = () => {
   const [peli, setPeli] = useState({})
+  const [temp, setTemp] = useState([])
   const { peliId } = useParams()
 
   useEffect(() => {
-    fetch(`https://api.tvmaze.com/shows/${peliId}`)
-      .then((response) => {
-        return response.json()
-      }).then((results) => {
-        setPeli(results)
-      }).catch((error) => {
-        console.error(error)
+    Promise.all([
+      fetch(`https://api.tvmaze.com/shows/${peliId}`),
+      fetch(`https://api.tvmaze.com/shows/${peliId}/episodes`)
+    ])
+      .then(([resPelis, resTemp]) =>
+        Promise.all([resPelis.json(), resTemp.json()])
+      )
+      .then(([dataPeli, dataTemp]) => {
+        setPeli(dataPeli)
+        setTemp(dataTemp)
       })
   }, [peliId])
 
   return (
+
     <>
-      <body className='angled-gradient'>
-        <main>
+
+      <main className='angled-gradient'>
+        <div>
           <div>
-            <div style={{ padding: '50px' }}>
-              <h1 id='titulo'>Los mejores Shows  TvMaze</h1>
-            </div>
-            <div id='contenedor1' className='shadow-lg p-3 mb-5 bg-white-opacity rounded'>
-              <div className='flex-container'>
-                <img style={{ maxHeight: '400px', paddingLeft: '50px' }} src={peli.image.original} alt={peli.name} />
-              </div>
-              <h1 id='titulodescription' style={{ color: 'white' }}>{peli.name} <p>{peli.summary}</p></h1>
-            </div>
+            <h1 id='titulo'>Los mejores Shows  TvMaze</h1>
+            <SectioOne
+              key={peli.id}
+              title={peli.name}
+              summary={peli.summary}
+              image={peli.image?.original}
+            />
           </div>
-        </main>
-      </body>
+          <div>
+            <SectionTwo
+              name={temp.name}
+              id={temp.id}
+
+            />
+          </div>
+        </div>
+      </main>
+
     </>
 
   )

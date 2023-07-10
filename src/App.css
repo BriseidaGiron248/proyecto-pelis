@@ -1,57 +1,92 @@
-
 .search-bar {
+
     margin-bottom: 20px;
-  }
-  
-.search-bar input {
-    width: 100%;
-    padding: 12px;
-    font-size: 18px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-p{
-font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-font-size: 1.8vw;
-width: 50%;
 
-}
-h1{
-  font-family:fantasy
-}
-#titulodescription{
-	padding-left: 50px;
-	font-size: 4vw;
-	font-variant: small-caps;
-}
-h3{
-  font-family:monospace;
+  }
 
-}
-body {
-  height: 1500px;
-  
-}
  
 
+.search-bar input {
+
+    width: 100%;
+
+    padding: 12px;
+
+    font-size: 18px;
+
+    border-radius: 4px;
+
+    border: 1px solid #ccc;
+
+  }
+
+p{
+
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+font-size: 1.2vw;
+
+width: 50%;
+
+
+
+
+}
+
+h1{
+
+  font-family:fantasy
+
+}
+
+#titulodescription{
+
+    padding-left: 50px;
+
+    font-size: 4vw;
+
+    font-variant: small-caps;
+
+}
+
+h3{
+
+  font-family:monospace;
+}
+
+main {
+
+  height: 1500px;
+}
 #titulo{
-	font-size: 5vw;
-	padding-left: 50px;
-	padding-top: 50px;
-	color: aliceblue;
-	text-decoration:overline;
+
+    font-size: 5vw;
+    padding-left: 50px;
+    padding-block: 100px;
+ 	 color: aliceblue;
+    text-decoration:overline;
 }
 .angled-gradient {
-	background: linear-gradient(0deg, black, rgb(221, 67, 33),black);
+    background: linear-gradient(0deg, black, rgb(221, 67, 33),black);
   }
 #contenedor1{
-	width: auto;
-	height: auto;	
-	position: relative;
+    width: auto;
+    height: auto;  
+    position: relative;
+   
 }
 .flex-container{
-	display:flex;
-	position: relative;
-	align-items: center;
-	justify-content: center
+    display:flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding-left: 200px;
+  
 }
+#caja{
+  display: flex;
+	width:auto;
+	padding: 10px;;
+	height: 350px;
+}
+	

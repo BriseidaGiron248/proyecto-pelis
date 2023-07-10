@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import EpiCard from './EpiCard'
 
 const SectionTwo = ({ peliId }) => {
   const [epi, setEpi] = useState([])
@@ -16,32 +17,24 @@ const SectionTwo = ({ peliId }) => {
   }, [peliId])
 
   return (
-    <div className='container'>
-      <thead>
-        <tr>
-          <th scope='col'>#</th>
-          <th scope='col'>First</th>
-          <th scope='col'>Last</th>
-          <th scope='col'>Handle</th>
-        </tr>
-      </thead>
+    <div style={{ paddingLeft: '100px', paddingRight: '100px' }}>
+      <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3'>
 
-      {
+        {
 
-          epi.map((item) => (
+    epi.map((item) => (
 
-            <table key={item.id} id='tabla' style={{ marginBottom: '0rem' }}>
-              <tbody>
-                <tr>
-                  <th scope='row' style={{ maxWidth: '30px' }}>{item.number}</th>
-                  <td style={{ maxWidth: '15px' }}>{item.season}</td>
-                  <td style={{ width: '250px' }}>{item.name}</td>
-                  <td><div style={{ Width: '450px' }} dangerouslySetInnerHTML={{ __html: [item.summary] }} /></td>
-                </tr>
-              </tbody>
-            </table>
-          ))
-        }
+      <EpiCard
+        KEY={item.id}
+        number={item.number}
+        title={item.name}
+        season={item.season}
+        summary={item.summary}
+        image={item.image?.original}
+      />
+    ))
+  }
+      </div>
     </div>
 
   )

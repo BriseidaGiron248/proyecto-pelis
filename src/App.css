@@ -20,16 +20,11 @@
 
   }
 
-p{
+#p{
 
 font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
 font-size: 1.2vw;
-
 width: 60%;
-
-
-
 
 }
 
@@ -71,10 +66,9 @@ main {
   }
  
 #contenedor1{
-    width: auto;
-    height: auto;  
+   
     position: relative;
-    background: linear-gradient(10deg, black, rgb(221, 67, 33));
+    background: black;
    
 }
 .flex-container{
@@ -91,10 +85,3 @@ main {
 	padding: 10px;;
 	height: 350px;
 }
-#tabla{
-  background: white;
- border-style: dotted;
- display: list-item;
- width: 70%;
-
-} 

@@ -27,7 +27,7 @@ const About = () => {
       <main className='angled-gradient'>
         <div>
           <div>
-            <h1 id='titulo'>Los mejores Shows  TvMaze</h1>
+            <h1 style={{ background: 'red', maxWidth: '100%', maxHeight: '300px' }} id='titulo'>Los mejores Shows  TvMaze</h1>
             <SectioOne
               key={peli.id}
               title={peli.name}
@@ -36,6 +36,7 @@ const About = () => {
             />
           </div>
           <div>
+
             <SectionTwo
               peliId={peli.id}
             />

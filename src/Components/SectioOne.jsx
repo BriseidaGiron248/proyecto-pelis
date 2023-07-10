@@ -8,9 +8,8 @@ const SectioOne = ({ title, summary, image }) => {
       <div className='flex-container'>
         <div id='caja'>
           <img style={{ borderRadius: '25px' }} src={image} alt={title} />
-
         </div>
-        <h1 id='titulodescription' style={{ color: 'white' }}>{title} <div dangerouslySetInnerHTML={{ __html: [summary] }} /></h1>
+        <h1 id='titulodescription' style={{ color: 'white' }}>{title} <div id='p' dangerouslySetInnerHTML={{ __html: [summary] }} /></h1>
       </div>
 
     </div>

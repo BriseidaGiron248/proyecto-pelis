@@ -36,11 +36,12 @@ const About = () => {
             />
           </div>
           <div>
-
             <SectionTwo
               peliId={peli.id}
             />
-            <SectionThree />
+            <SectionThree
+              peliId={peli.id}
+            />
 
           </div>
         </div>

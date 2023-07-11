@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import EpiCard from './EpiCard'
 
 const SectionTwo = ({ peliId }) => {
@@ -25,7 +25,7 @@ const SectionTwo = ({ peliId }) => {
     epi.map((item) => (
 
       <EpiCard
-        KEY={item.id}
+        key={item.id}
         number={item.number}
         title={item.name}
         season={item.season}
